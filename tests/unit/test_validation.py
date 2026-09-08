@@ -363,6 +363,3 @@ def test_rejected_submission_is_not_duplicate() -> None:
         isinstance(first_result, ValidationOutcome),
         isinstance(second_result, RecordedNotification),
     ) == (True, True)
-
-def test_temporary_ci_gate_failure() -> None:
-    assert False

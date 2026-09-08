@@ -30,4 +30,5 @@ PR #1 ran `checks / checks` on `pull_request` and passed in 11 seconds.
 
 The workflow runs `uv sync --frozen`, `ruff`, `mypy src tests`, and `pytest`.
 
-I did not verify a deliberately failing check against branch protection before submission.
+I pushed a temporary failing test in commit `b02ab29`. The PR workflow failed on `pytest` with 1 failed and 93 passed, proving the workflow can fail the job. I then removed the temporary failing test before submission.
+
