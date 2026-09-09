@@ -7,6 +7,7 @@ that appears here is a rule the service layer cannot be tested for.
 
 from __future__ import annotations
 
+from decimal import Decimal
 from typing import Annotated, Any
 
 from fastapi import Depends, FastAPI, Request, status
@@ -73,7 +74,8 @@ def error_response(code: str, http_status: int, detail: dict[str, Any]) -> JSONR
                     "message": ERROR_MESSAGES[code],
                     "detail": detail,
                 }
-            }
+            },
+            custom_encoder={Decimal: str},
         ),
     )
 
