@@ -13,8 +13,6 @@ I used Cursor for a small Day 4 task: understanding the full service flow and cl
 - It helped me think through the Docker setup and the `linux/amd64` build command.
 
 ## What Was Awkward
-
-- Cursor only knows what I show it, so I still had to keep the assignment rubric open.
 - Docker was not available in the dev container, so I had to run the Docker build command from my Darwin/local environment instead.
 
 ## Preference
