@@ -183,6 +183,19 @@ def test_extra_field_is_invalid_request(client: TestClient) -> None:
     assert_error(response.json(), "INVALID_REQUEST", {"field": "unexpected"})
 
 
+def test_multiple_shape_errors_do_not_name_one_field(client: TestClient) -> None:
+    payload = {
+        "policy_number": "MOT-4471",
+        "claim_type": "collision",
+    }
+
+    response = client.post("/notifications", json=payload)
+
+    assert response.status_code == 400
+    assert_error(response.json(), "INVALID_REQUEST", {"reason": "multiple_invalid_fields"})
+    assert "field" not in response.json()["error"]["detail"]
+
+
 @pytest.mark.parametrize(
     ("reason", "expected_status", "expected_code"),
     [

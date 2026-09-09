@@ -81,7 +81,11 @@ def error_response(code: str, http_status: int, detail: dict[str, Any]) -> JSONR
 
 
 def validation_detail(error: RequestValidationError) -> dict[str, str]:
-    first_error = error.errors()[0]
+    errors = error.errors()
+    if len(errors) != 1:
+        return {"reason": "multiple_invalid_fields"}
+
+    first_error = errors[0]
     location = first_error.get("loc", ())
     field = next((part for part in reversed(location) if isinstance(part, str)), "body")
     reason = str(first_error.get("type", "invalid"))
