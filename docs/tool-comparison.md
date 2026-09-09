@@ -15,7 +15,7 @@ I used Cursor for a small Day 4 task: understanding the full service flow and cl
 ## What Was Awkward
 
 - Cursor only knows what I show it, so I still had to keep the assignment rubric open.
-- I had to double-check that the README and Docker notes matched the actual contract.
+- Docker was not available in the dev container, so I had to run the Docker build command from my Darwin/local environment instead.
 
 ## Preference
 
