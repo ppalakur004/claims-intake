@@ -10,14 +10,6 @@ Cursor was helpful because it stayed close to the files in VS Code. I could look
 
 Cursor was awkward when I needed to connect the work back to the full rubric. I still had to be careful that the diagrams and notes matched the contract instead of just looking correct visually.
 
-## Codex
-
-Codex was more useful for implementation across multiple files. It helped connect the API route, integration tests, Dockerfile, README, and the contract requirements in one place.
-
-Codex was less useful for quick visual understanding because I had to ask for the flow and then read it in chat, while Cursor felt more natural inside the editor.
-
 ## Preference
 
-For understanding flow, diagrams, and small local edits, I would use Cursor because it works directly beside the code.
-
-For contract-driven implementation and checking several files together, I would use Codex because it keeps the bigger assignment context clearer.
+For understanding flow, diagrams, and small local edits, I would use Cursor because it works directly beside the code and makes the service easier to reason about visually.
