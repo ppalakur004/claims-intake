@@ -2,14 +2,21 @@
 
 ## Task
 
-I used Cursor for a bounded Day 4 task: understanding and cleaning up the service flow. The main thing Cursor helped with was turning the request flow into simple Mermaid diagrams so I could see how `routes.py`, `models.py`, `service.py`, `policy_client.py`, and `repository.py` connect.
+I used Cursor for a small Day 4 task: understanding the full service flow and cleaning up the setup notes.
 
-## Cursor
+## What Cursor Helped With
 
-Cursor was helpful because it stayed close to the files in VS Code. I could look at the route file, ask questions, and use the diagram to understand the flow from `POST /notifications` to validation, policy lookup, rule checks, repository recording, and the final response.
+- It helped me see the code while asking questions, so I did not have to keep switching between files.
+- It helped me make simple Mermaid diagrams for the request flow.
+- The diagrams made it easier to understand how `routes.py`, `models.py`, `service.py`, `policy_client.py`, and `repository.py` connect.
+- It helped me check the README steps for running the service and testing it.
+- It helped me think through the Docker setup and the `linux/amd64` build command.
 
-Cursor was awkward when I needed to connect the work back to the full rubric. I still had to be careful that the diagrams and notes matched the contract instead of just looking correct visually.
+## What Was Awkward
+
+- Cursor only knows what I show it, so I still had to keep the assignment rubric open.
+- I had to double-check that the README and Docker notes matched the actual contract.
 
 ## Preference
 
-For understanding flow, diagrams, and small local edits, I would use Cursor because it works directly beside the code and makes the service easier to reason about visually.
+For small edits, setup notes, diagrams, and understanding the flow beside the code, I would use Cursor because it feels quick and easy inside VS Code.
